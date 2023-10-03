@@ -21,7 +21,11 @@ export default{
 
          <AppJumbotron></AppJumbotron> 
 
-         <div>CIAO</div>
+         <div class="d-flex justify-content-center align-items-center">
+            <a href="#" class="circle"></a>
+            <a href="#" class="circle mx-3"></a>
+            <a href="#" class="circle active"><div class="active-element"></div></a>
+         </div>
       </div>          
       
    </header>
