@@ -13,7 +13,7 @@ export default{
 
 <template>
 
-   <nav class="p-5 d-flex align-items-center justify-content-between">
+   <nav class="d-flex align-items-center justify-content-between">
       <a href="#"><img src="../assets/img/img/logo-light.png" alt="iacademy-logo" width="250"></a>
       <div class="d-flex justify-content-between mx-5">
          <a href="#" v-for="item in state.navbarItems" class="text-white text-uppercase fw-medium mx-4">{{ item }}</a>

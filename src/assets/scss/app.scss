@@ -39,4 +39,30 @@ header{
       border-radius: 50%;
       font-size: 0.75rem;
    }
+
+   .jumbo{
+      margin-top: -150px;
+
+      h1{
+         font-family: Tasman;
+         font-size: 7rem;
+         font-weight: 500;
+      }
+
+      p{
+         font-family: Montserrat;
+         font-size: 1.3rem;
+      }
+
+      a{
+         background-color: $ia-primary;
+         padding: 1.5rem 3rem;
+         color: white;
+         text-decoration: none;
+         text-transform: uppercase;
+         font-weight: 500;
+      }
+   }
+
+   
 }
