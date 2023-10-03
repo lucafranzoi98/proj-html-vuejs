@@ -83,13 +83,47 @@ header{
 
    .active-element{
       position: absolute;
-      width: 0.5rem;
-      height: 0.5rem;
+      width: 0.65rem;
+      height: 0.65rem;
       background-color: white;
       border-radius: 50%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+   }   
+}
+
+main{
+
+   .subject-item{
+      background-color: rgba($color: $ia-primary, $alpha: 0.1);
+      width: 13rem;
+
+      h5{
+         font-family: Tasman;
+         font-weight: 600;
+         font-size: 1.5rem;
+      }
+   }
+
+   .tutoring{
+
+      h2{
+         font-family: Tasman;
+         font-size: 4rem;
+         font-weight: 600;
+      }
+
+      p{
+         font-family: Montserrat;
+      }
+
+      a{
+         text-decoration: none;
+         color: $ia-primary;
+         font-weight: 900;
+         font-family: Montserrat;
+      }
    }
 
    
