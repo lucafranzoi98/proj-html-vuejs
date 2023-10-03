@@ -1,10 +1,11 @@
 <script>
 import { state } from "./state.js";
+import AppHeader from "./components/AppHeader.vue";
 
 export default{
    name: "App",
    components: {
-
+      AppHeader,
    },
    data (){
       return {
@@ -16,7 +17,7 @@ export default{
 
 <template>
 
-   <div class="text-warning">test</div>
+   <AppHeader></AppHeader>
 
 </template>
 
