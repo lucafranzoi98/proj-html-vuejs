@@ -17,7 +17,6 @@ nav a{
 }
 
 header{
-   background-image: url("../img/img/course-9-f-img.jpg");
    background-repeat: no-repeat;
    height: 1000px;
    background-position: center;
@@ -215,5 +214,55 @@ main{
       }
    }
 
+   .offers{
+      margin-top: 12rem;
+
+      .offer-item{
+         width: 24rem;
+         border: 1px solid rgb(215, 215, 215);
+         font-family: Tasman;
+         font-size: 1.5rem;
+         padding-left: 2rem;
+         font-weight: 600;
+         color: #747474;
+         padding-top: 2.5rem;
+         padding-bottom: 2.5rem;
+      }
+
+      h2{
+         font-family: Tasman;
+         font-size: 5.5rem;
+         font-weight: 600;
+         margin-bottom: 3rem;
+      }
+
+      p{
+         font-family: Montserrat;
+         font-size: 1.5rem;
+         margin-bottom: 6rem;
+      }
+
+      .active-offer{
+         color: $ia-primary;
+         background-color: #f9f9f9;
+         border-left: 10px solid $ia-primary;
+      }
+
+      .point{
+         margin-bottom: 2.5rem;
+      }
+
+      span{
+         font-family: Montserrat;
+         font-size: 1.5rem;
+         margin-left: 0.5rem;
+      }
+
+      .icon{
+         width: 15%;
+         height: 15%;
+         margin-left: 3rem;
+      }
+   }
    
 }

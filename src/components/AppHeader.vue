@@ -1,19 +1,25 @@
 <script>
 import AppNavbar from './AppNavbar.vue';
 import AppJumbotron from './AppJumbotron.vue';
+import { state } from "../state.js";
 
 export default{
    name: "AppHeader",
    components: {
       AppNavbar,
-      AppJumbotron
+      AppJumbotron,
+   },
+   data(){
+      return {
+         state
+      }
    }
 }
 </script>
 
 <template>
 
-   <header>
+   <header :style="{'background-image': 'url(' + (state.headerCarousel[state.activeHeader]) + ')'}">
       
       <div class="darker-layer d-flex flex-column justify-content-between p-5">
 
@@ -22,9 +28,15 @@ export default{
          <AppJumbotron></AppJumbotron> 
 
          <div class="d-flex justify-content-center align-items-center">
-            <a href="#" class="circle"></a>
-            <a href="#" class="circle mx-3"></a>
-            <a href="#" class="circle active"><div class="active-element"></div></a>
+            <div class="circle" @click="state.changeActiveHeader(0)" :class="state.activeHeader == 0 ? 'active' : ''">
+               <div v-if="state.activeHeader == 0" class="active-element"></div>
+            </div>
+            <div class="circle mx-3" @click="state.changeActiveHeader(1)" :class="state.activeHeader == 1 ? 'active' : ''">
+               <div v-if="state.activeHeader == 1" class="active-element"></div>
+            </div>
+            <div class="circle" @click="state.changeActiveHeader(2)" :class="state.activeHeader == 2 ? 'active' : ''">               
+               <div v-if="state.activeHeader == 2" class="active-element"></div>
+            </div>
          </div>
       </div>          
       
