@@ -41,27 +41,28 @@ header{
    }
 
    .jumbo{
-      margin-top: -150px;
+      margin-top: -100px;
 
       h1{
          font-family: Tasman;
          font-size: 7rem;
-         font-weight: 500;
+         font-weight: 600;
       }
 
       p{
          font-family: Montserrat;
-         font-size: 1.3rem;
+         font-size: 1.4rem;
          margin-bottom: 5rem;
       }
 
       a{
          background-color: $ia-primary;
-         padding: 1.5rem 3rem;
+         padding: 2rem 4rem;
          color: white;
          text-decoration: none;
          text-transform: uppercase;
          font-weight: 500;
+         font-size: 1.4rem;
 
       }
    }
@@ -95,34 +96,122 @@ header{
 
 main{
 
-   .subject-item{
-      background-color: rgba($color: $ia-primary, $alpha: 0.1);
-      width: 13rem;
+   .subject{
+      margin-top: 6rem;
 
-      h5{
-         font-family: Tasman;
-         font-weight: 600;
-         font-size: 1.5rem;
+      .subject-item{
+         background-color: rgba($color: $ia-primary, $alpha: 0.1);
+         width: 13rem;
+         padding: 4rem 0;
+
+         h5{
+            font-family: Tasman;
+            font-weight: 600;
+            font-size: 1.6rem;
+         }
       }
-   }
+   }   
 
    .tutoring{
+      margin-top: 9rem;
 
       h2{
          font-family: Tasman;
          font-size: 4rem;
          font-weight: 600;
+         margin-bottom: 3rem;
       }
 
       p{
          font-family: Montserrat;
+         font-size: 1.3rem;
+         margin-bottom: 3rem;
       }
 
       a{
          text-decoration: none;
          color: $ia-primary;
-         font-weight: 900;
+         font-weight: bold;
          font-family: Montserrat;
+         font-size: 1.3rem;
+         margin-bottom: 5rem;
+      }
+   }
+
+   .children{
+      margin-top: 9rem;
+
+      img{
+         width: 50%;
+         height: 50%;
+         margin-right: 7rem;
+         margin-top: 5rem
+      }
+
+      & > div{
+         margin-right: 5rem;
+
+         h2{
+            font-family: Tasman;
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+         }
+
+         p{
+            font-family: Montserrat;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+         }
+
+         .data{
+            color: $ia-primary;
+            font-family: Tasman;
+            font-size: 1.5rem;
+            font-weight: 600;
+
+            .numbers{
+               font-size: 5rem;
+               margin-right: 5rem;
+            }         
+         }
+      }      
+   }
+
+   .testimonials{
+      margin-top: 5rem;
+      padding: 12rem 15rem;
+      background-image: url(../img/img/h5-parallax-img-1.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      p{
+         font-family: Montserrat;
+         font-size: 1.5rem;
+         margin-bottom: 3rem;
+      }
+
+      h5{
+         font-family: Tasman;
+         font-size: 2.5rem;
+         font-weight: 600;
+         margin-bottom: 1rem;
+      }
+
+      h6{
+         font-size: 1.5rem;
+      }
+
+      .circle{
+         margin-top: 5rem;
+         width: 1rem;
+         height: 1rem;
+         background-color: rgba($color: #ffffff, $alpha: 0.5);
+         border-radius: 50%;
+      }
+
+      .active{
+         background-color: rgba($color: #ffffff, $alpha: 0.9);
       }
    }
 
