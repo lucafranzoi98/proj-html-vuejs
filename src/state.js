@@ -298,5 +298,11 @@ export const state = reactive({
             "True",
          ]
       },
+   ],
+   partners: [
+      "h5-client-5.png",
+      "h5-client-1.png",
+      "h5-client-2.png",
+      "h5-client-1.png"
    ]
 })

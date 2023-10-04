@@ -28,7 +28,7 @@ export default{
             <div class="d-flex">
                <div class="col-4" v-for="plan in state.plans">
                   <div class="plans-name text-center">
-                     <img :src="state.getImagePath(plan.img)" class="mb-3" width="120">
+                     <img :src="state.getImagePath(plan.img)" class="mb-3" width="130">
                      <h5>{{ plan.name }}</h5>
                      <h6>{{ plan.price }}</h6>
                   </div>
@@ -39,7 +39,10 @@ export default{
                      </div>
                      <div v-show="item == 'False'" class="plan-data">
                         <img src="../assets/img/icons/close.png" height="26">
-                     </div>
+                     </div>                     
+                  </div>
+                  <div class="plan-button">
+                     <a href="#" class="text-uppercase fw-bold">Get it now</a>
                   </div>
                </div>
             </div>
