@@ -6,6 +6,7 @@ import AppChildren from "./AppChildren.vue";
 import AppTestimonials from "./AppTestimonials.vue";
 import AppOffers from "./AppOffers.vue";
 import AppCourses from "./AppCourses.vue";
+import AppPricing from "./AppPricing.vue";
 
 export default{
    name: "AppMain",
@@ -15,7 +16,8 @@ export default{
       AppChildren,
       AppTestimonials,
       AppOffers,
-      AppCourses
+      AppCourses,
+      AppPricing
    },
    data (){
       return {
@@ -41,6 +43,8 @@ export default{
       <AppOffers></AppOffers>
 
       <AppCourses></AppCourses>
+
+      <AppPricing></AppPricing>
       
    </main>
 </template>

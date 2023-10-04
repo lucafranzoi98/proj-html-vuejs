@@ -8,7 +8,8 @@ export default{
       teacher: String,
       text: String,
       number: String,
-      tag: String
+      tag: String,
+      colorBadge: String
    }
 }
 </script>
@@ -21,7 +22,7 @@ export default{
          <div class="card-body">
             <div class="d-flex justify-content-between align-items-center">
                <h5>{{name}}</h5>
-               <div class="badge rounded-pill text-bg-warning text-white text-uppercase my-badge">{{price}}</div>
+               <div class="badge rounded-pill text-white text-uppercase my-badge" :class="colorBadge">{{price}}</div>
             </div>
             <h6>{{ teacher }}</h6>
             <p class="card-text">{{ text }}</p>

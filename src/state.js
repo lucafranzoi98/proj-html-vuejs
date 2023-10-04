@@ -236,4 +236,67 @@ export const state = reactive({
       
    ],
    activeCourse: 1,
+   changeActiveCourse(n){
+      this.activeCourse = n;
+   },
+   plansOptions: {
+      name: "Info",
+      items: [
+         "Number of Courses",
+         "Time",
+         "Web Designing",
+         "Human-Centered Design",
+         "Basic Marketing",
+         "Phyton for Everybody",
+         "Android Developer",
+         "Business English"
+      ]
+   },
+   plans: [
+      {
+         name: "Standard",
+         img: "h5-custom-icon-7.png",
+         price: "$12",
+         items: [
+            "2",
+            "15 Days",
+            "True",
+            "True",
+            "False",
+            "False",
+            "False",
+            "False",
+         ]
+      },
+      {
+         name: "Professional",
+         img: "h5-custom-icon-8.png",
+         price: "$59",
+         items: [
+            "4",
+            "30 Days",
+            "True",
+            "True",
+            "True",
+            "True",
+            "False",
+            "False",
+         ]
+      },
+      {
+         name: "Advanced",
+         img: "h5-custom-icon-9.png",
+         price: "$88",
+         items: [
+            "6",
+            "30 Days",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+         ]
+      },
+   ]
 })
