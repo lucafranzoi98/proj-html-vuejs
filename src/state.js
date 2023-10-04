@@ -1,6 +1,9 @@
 import { reactive } from "vue";
 
 export const state = reactive({
+   getImagePath(img){
+      return new URL(`./assets/img/img/${img}`, import.meta.url).href;
+   },
    navbarItems: [
       "Home", "Courses", "Instructors", "Events", "Pages", "Elements"
    ],
@@ -139,10 +142,98 @@ export const state = reactive({
 
    ],
    activeOffer: 0,
-   getImagePath(img){
-      return new URL(`./assets/img/img/${img}`, import.meta.url).href;
-   },
    changeActiveOffer(i){
       this.activeOffer = i;
-   }
+   },
+   courses: [
+      [
+         {
+            img: "course-1-f-img.jpg",
+            name: "Economy",
+            teacher: "Luisa Adwerd",
+            price: "$50",
+            text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus modi consequuntur distinctio! Maiores optio dolor laudantium eveniet neque minus quos.",
+            number: "1",
+            tag: "Commercial"
+         },
+         {
+            img: "course-2-f-img.jpg",
+            name: "Web Design",
+            teacher: "Luke Walk",
+            price: "Free",
+            text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus modi consequuntur distinctio! Maiores optio dolor laudantium eveniet neque minus quos.",
+            number: "1",
+            tag: "Programming"
+         },
+         {
+            img: "course-3-f-img.jpg",
+            name: "IOS Dev",
+            teacher: "Steve Ande",
+            price: "$100",
+            text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus modi consequuntur distinctio! Maiores optio dolor laudantium eveniet neque minus quos.",
+            number: "1",
+            tag: "Developer"
+         },
+      ],
+      [
+         {
+            img: "course-4-f-img.jpg",
+            name: "Android Developer",
+            teacher: "David Sanders",
+            price: "Free",
+            text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus modi consequuntur distinctio! Maiores optio dolor laudantium eveniet neque minus quos.",
+            number: "1",
+            tag: "Programming"
+         },
+         {
+            img: "course-5-f-img.jpg",
+            name: "Web Designing",
+            teacher: "Jennifer Powell",
+            price: "Free",
+            text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus modi consequuntur distinctio! Maiores optio dolor laudantium eveniet neque minus quos.",
+            number: "1",
+            tag: "Programming"
+         },
+         {
+            img: "course-6-f-img.jpg",
+            name: "Financial Modeling",
+            teacher: "Edward Bowman",
+            price: "$20",
+            text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus modi consequuntur distinctio! Maiores optio dolor laudantium eveniet neque minus quos.",
+            number: "1",
+            tag: "Business"
+         },
+      ],
+      [
+         {
+            img: "course-7-f-img.jpg",
+            name: "Copywtriting",
+            teacher: "Daniel Lapen",
+            price: "Free",
+            text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus modi consequuntur distinctio! Maiores optio dolor laudantium eveniet neque minus quos.",
+            number: "1",
+            tag: "Writing"
+         },
+         {
+            img: "course-8-f-img.jpg",
+            name: "Videomaking",
+            teacher: "Chris Palter",
+            price: "$25",
+            text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus modi consequuntur distinctio! Maiores optio dolor laudantium eveniet neque minus quos.",
+            number: "1",
+            tag: "Video"
+         },
+         {
+            img: "course-9-f-img.jpg",
+            name: "Photograpy",
+            teacher: "Yan Huli",
+            price: "$20",
+            text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus modi consequuntur distinctio! Maiores optio dolor laudantium eveniet neque minus quos.",
+            number: "1",
+            tag: "Photography"
+         },
+      ],
+      
+   ],
+   activeCourse: 1,
 })
