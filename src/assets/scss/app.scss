@@ -16,6 +16,13 @@
    z-index: 10;
 }
 
+h2{
+   font-family: Tasman;
+   font-size: 4rem;
+   font-weight: 600;
+   margin-bottom: 3rem;
+}
+
 header{
    height: 1000px;
    position: relative;
@@ -137,13 +144,6 @@ main{
    .tutoring{
       margin-top: 9rem;
 
-      h2{
-         font-family: Tasman;
-         font-size: 4rem;
-         font-weight: 600;
-         margin-bottom: 3rem;
-      }
-
       p{
          font-family: Montserrat;
          font-size: 1.3rem;
@@ -252,13 +252,6 @@ main{
          padding-bottom: 2.5rem;
       }
 
-      h2{
-         font-family: Tasman;
-         font-size: 5.5rem;
-         font-weight: 600;
-         margin-bottom: 3rem;
-      }
-
       p{
          font-family: Montserrat;
          font-size: 1.5rem;
@@ -297,13 +290,6 @@ main{
       padding-top: 7rem;
       padding-bottom: 15rem;
       background-position-y: -800px;
-
-      h2{
-         font-family: Tasman;
-         font-size: 5rem;
-         font-weight: 600;
-         margin-bottom: 2rem;
-      }
 
       p{
          font-family: Montserrat;
@@ -391,13 +377,7 @@ main{
             height: 3rem;
          }
       }
-      
-      h2{
-         font-family: Tasman;
-         font-size: 5rem;
-         font-weight: 600;
-         margin-bottom: 1.5rem;
-      }
+   
 
       p{
          font-family: Montserrat;
