@@ -1,6 +1,9 @@
 import { reactive } from "vue";
 
 export const state = reactive({
+   scrollTop(){
+      window.scrollTo(0, 0)
+   },
    getImagePath(img){
       return new URL(`./assets/img/img/${img}`, import.meta.url).href;
    },
@@ -299,10 +302,37 @@ export const state = reactive({
          ]
       },
    ],
+   activePlan: null,
+   changeActivePlan(i){
+      this.activePlan = i;
+   },
    partners: [
       "h5-client-5.png",
       "h5-client-1.png",
       "h5-client-2.png",
       "h5-client-1.png"
-   ]
+   ],
+   footerCourses: {
+      name: "Popular Courses",
+      courses: [
+         {
+            name: "Business English",
+            teacher: "Preston Marshall"
+         },
+         {
+            name: "Social Computing",
+            teacher: "David Sanders"
+         },
+         {
+            name: "Learn Spanish",
+            teacher: "Jennie King"
+         }
+      ]
+   },
+   footerSupport: {
+      name: "Support",
+      voices: [
+         "User dashboard", "Contact Us", "FAQ", "Course Offer", "Events"
+      ]
+   }
 })
