@@ -25,15 +25,29 @@
 }
 
 header{
-   background-repeat: no-repeat;
    height: 1000px;
-   background-position: center;
-   background-size: 2100px;
+   position: relative;
+
+   .background{
+      background-repeat: no-repeat;
+      width: 100%;
+      background-position: center;
+      background-size: 2100px;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -10;
+   }
 
    nav a{
       font-family: Montserrat;
       text-decoration: none;
       font-size: 1.3rem;
+
+      &:hover{
+         text-decoration: underline;
+      }
    }
 
    .darker-layer{

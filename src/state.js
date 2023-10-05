@@ -10,14 +10,14 @@ export const state = reactive({
    navbarItems: [
       "Home", "Courses", "Instructors", "Events", "Pages", "Elements"
    ],
-   headerCarousel: [
-      "src/assets/img/img/course-6-f-img.jpg",
-      "src/assets/img/img/course-11-f-img.jpg",
-      "src/assets/img/img/course-9-f-img.jpg"
+   headerCarousel: [      
+      "course-6-f-img.jpg",      
+      "course-11-f-img.jpg",     
+      "course-9-f-img.jpg"
    ],
    activeHeader: 2,
-   changeActiveHeader(n){
-      this.activeHeader = n;
+   changeActiveHeader(i){
+      this.activeHeader = i;
    },
    subjects: [
       {
@@ -66,8 +66,8 @@ export const state = reactive({
       }
    ],
    activeTestimonial: 1,
-   changeActiveTestimonial(n){
-      this.activeTestimonial = n;
+   changeActiveTestimonial(i){
+      this.activeTestimonial = i;
    },
    offers:[
       {
@@ -239,8 +239,8 @@ export const state = reactive({
       
    ],
    activeCourse: 1,
-   changeActiveCourse(n){
-      this.activeCourse = n;
+   changeActiveCourse(i){
+      this.activeCourse = i;
    },
    plansOptions: {
       name: "Info",

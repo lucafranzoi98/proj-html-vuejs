@@ -20,9 +20,7 @@ export default{
          <h5>{{ testimonial.name }}</h5>
          <h6 class="text-uppercase fw-semibold">{{ testimonial.role }}</h6>
          <div class="d-flex justify-content-center">
-            <div class="circle" @click="state.changeActiveTestimonial(0)" :class="state.activeTestimonial == 0 ? 'active' : ''"></div>
-            <div class="circle mx-3" @click="state.changeActiveTestimonial(1)" :class="state.activeTestimonial == 1 ? 'active' : ''"></div>
-            <div class="circle" @click="state.changeActiveTestimonial(2)" :class="state.activeTestimonial == 2 ? 'active' : ''"></div>
+            <div class="circle mx-2" v-for="(, i) in state.testimonials" @click="state.changeActiveTestimonial(i)" :class="state.activeTestimonial == i ? 'active' : ''"></div>
          </div>
       </div>
    </section>

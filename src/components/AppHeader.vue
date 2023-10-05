@@ -13,13 +13,16 @@ export default{
       return {
          state
       }
-   }
+   },
 }
 </script>
 
 <template>
 
-   <header :style="{'background-image': 'url(' + (state.headerCarousel[state.activeHeader]) + ')'}">
+   <header>
+
+      <div class="background" v-for="(header, i) in state.headerCarousel" :style="{'background-image': 'url(' + (state.getImagePath(header)) + ')'}" v-show="state.activeHeader == i">
+      </div>
       
       <div class="darker-layer d-flex flex-column justify-content-between p-5">
 
@@ -28,15 +31,11 @@ export default{
          <AppJumbotron></AppJumbotron> 
 
          <div class="d-flex justify-content-center align-items-center">
-            <div class="circle" @click="state.changeActiveHeader(0)" :class="state.activeHeader == 0 ? 'active' : ''">
-               <div v-if="state.activeHeader == 0" class="active-element"></div>
+
+            <div class="circle mx-2" v-for="(, i) in state.headerCarousel" @click="state.changeActiveHeader(i)" :class="state.activeHeader == i ? 'active' : ''">
+               <div v-if="state.activeHeader == i" class="active-element"></div>
             </div>
-            <div class="circle mx-3" @click="state.changeActiveHeader(1)" :class="state.activeHeader == 1 ? 'active' : ''">
-               <div v-if="state.activeHeader == 1" class="active-element"></div>
-            </div>
-            <div class="circle" @click="state.changeActiveHeader(2)" :class="state.activeHeader == 2 ? 'active' : ''">               
-               <div v-if="state.activeHeader == 2" class="active-element"></div>
-            </div>
+            
          </div>
       </div>          
       
