@@ -7,17 +7,15 @@ export const state = reactive({
    getImagePath(img){
       return new URL(`./assets/img/img/${img}`, import.meta.url).href;
    },
-   navbarItems: [
+   navbar: [
       "Home", "Courses", "Instructors", "Events", "Pages", "Elements"
    ],
    headerCarousel: [      
-      "course-6-f-img.jpg",      
-      "course-11-f-img.jpg",     
-      "course-9-f-img.jpg"
+      "course-6-f-img.jpg", "course-11-f-img.jpg", "course-9-f-img.jpg"
    ],
    activeHeader: 2,
    changeActiveHeader(i){
-      this.activeHeader = i;
+      state.activeHeader = i;
    },
    subjects: [
       {

@@ -12,7 +12,7 @@ export default{
          <h2>Empowering Children to Reach Their Potential.</h2>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, aspernatur nihil modi fugit, reprehenderit porro saepe eius consequatur, fugiat eum nostrum illum consectetur qui delectus unde quod cumque iusto atque. Non reiciendis nemo optio?</p>
          <div class="d-flex data">
-            <div class="me-5">
+            <div>
                <div class="numbers">168</div>
                <div>User Stories</div>
             </div>

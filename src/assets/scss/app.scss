@@ -1,70 +1,66 @@
 @use '/node_modules/bootstrap/scss/bootstrap.scss';
 @use "./partials/variables.scss" as *;
-@font-face {
-   font-family: Tasman;
-   src: url(../font/tasman/Tasman-Regular.ttf);
-}
-
-@font-face {
-   font-family: Montserrat;
-   src: url(../font/montserrat/Montserrat-Regular.ttf);
-}
 
 .scroll-top{
-   width: 4rem;
-   height: 4rem;
-   background-color: $ia-primary;
    position: fixed;
    bottom: 0;
    right: 0;
+   width: 4rem;
+   height: 4rem;
+   background-color: $ia-primary;   
    font-family: Montserrat;
    color: white;
    font-size: 0.75rem;
    font-weight: 600;
    text-decoration: none;
+   z-index: 10;
 }
 
 header{
    height: 1000px;
    position: relative;
 
-   .background{
-      background-repeat: no-repeat;
+   .background{   
+      position: absolute;  
+      top: 0;
+      left: 0; 
       width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
       background-position: center;
       background-size: 2100px;
-      position: absolute;
-      height: 100%;
-      top: 0;
-      left: 0;
       z-index: -10;
-   }
+   }   
 
-   nav a{
-      font-family: Montserrat;
-      text-decoration: none;
-      font-size: 1.3rem;
-
-      &:hover{
-         text-decoration: underline;
-      }
-   }
-
-   .darker-layer{
+   .dark-layer{
       background-color: rgba($color: #000000, $alpha: 0.25);
       height: 100%;
    }
 
-   .shopping-cart-number{
-      position: absolute;
-      top: 0;
-      right: -8px;
-      color: white;
-      width: 20px;
-      height: 20px;
-      background-color: $ia-primary;
-      border-radius: 50%;
-      font-size: 0.75rem;
+   nav{
+      
+      a{
+         font-family: Montserrat;
+         text-decoration: none;
+         font-size: 1.3rem;
+         font-weight: 500;
+
+         &:hover{
+            text-decoration: underline;
+         }
+      }
+
+      .shopping-cart-number{
+         position: absolute;
+         top: 0;
+         right: -8px;
+         width: 20px;
+         height: 20px;
+         color: white;         
+         background-color: $ia-primary;
+         border-radius: 50%;
+         font-size: 0.75rem;
+      }
    }
 
    .jumbo{
@@ -87,7 +83,6 @@ header{
          padding: 2rem 4rem;
          color: white;
          text-decoration: none;
-         text-transform: uppercase;
          font-weight: 500;
          font-size: 1.4rem;
 
@@ -111,13 +106,13 @@ header{
 
    .active-element{
       position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 0.65rem;
       height: 0.65rem;
       background-color: white;
       border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
    }   
 }
 
@@ -152,7 +147,7 @@ main{
       p{
          font-family: Montserrat;
          font-size: 1.3rem;
-         margin-bottom: 3rem;
+         margin-bottom: 2rem;
       }
 
       a{
@@ -199,7 +194,7 @@ main{
 
             .numbers{
                font-size: 5rem;
-               margin-right: 5rem;
+               margin-right: 7rem;
             }         
          }
       }      
@@ -247,12 +242,12 @@ main{
 
       .offer-item{
          width: 24rem;
-         border: 1px solid rgb(215, 215, 215);
+         border: 1px solid $ia-border;
          font-family: Tasman;
          font-size: 1.5rem;
          padding-left: 2rem;
          font-weight: 600;
-         color: #747474;
+         color: $ia-text-light;
          padding-top: 2.5rem;
          padding-bottom: 2.5rem;
       }
@@ -272,7 +267,7 @@ main{
 
       .active-offer{
          color: $ia-primary;
-         background-color: #f9f9f9;
+         background-color: $ia-active-bg;
          border-left: 10px solid $ia-primary;
       }
 
@@ -297,8 +292,8 @@ main{
       background-image: url("../img/img/page-background-img.png");
       margin-top: 16rem;
       background-size: 2850px;
-      border-top: 1px solid #e4e4e4;
-      border-bottom: 1px solid #e4e4e4;
+      border-top: 1px solid $ia-border;
+      border-bottom: 1px solid $ia-border;
       padding-top: 7rem;
       padding-bottom: 15rem;
       background-position-y: -800px;
@@ -319,7 +314,7 @@ main{
 
       .card{
          margin-bottom: 3rem;
-         border: 1px solid #e6e6e6;
+         border: 1px solid $ia-border;
 
          h5{
             font-family: Tasman;
@@ -337,7 +332,7 @@ main{
             font-family: Montserrat;
             font-weight: 600;
             margin-bottom: 2rem;
-            color: #b7b7b7;
+            color: $ia-text-lighter;
          }
 
          p{
@@ -348,7 +343,7 @@ main{
          }
 
          .tags{
-            color: #b7b7b7;
+            color: $ia-text-lighter;
             font-family: Montserrat;
             font-weight: 600;
             font-size: 1.25rem;
@@ -375,7 +370,7 @@ main{
       background-image: url("../img/img/page-background-img.png");
       margin-top: 10rem;
       background-size: 3000px;
-      border-bottom: 1px solid #e4e4e4;
+      border-bottom: 1px solid $ia-border;
       padding-bottom: 12rem;
 
       .floating-icon{
@@ -412,17 +407,17 @@ main{
       }
 
       .save-up{
-         border: 1px solid #e4e4e4;
+         border: 1px solid $ia-border;
          background-color: white;
          padding: 5rem 3rem;
-         border-top: 5px solid #d6f3fe;
+         border-top: 5px solid $ia-primary-ligth;
          height: 350px;
       }
 
       .plans-name{
-         background-color: #f7fdff;
-         border: 1px solid #e4e4e4;
-         border-top: 5px solid #d6f3fe;
+         background-color: $ia-primary-ligther;
+         border: 1px solid $ia-border;
+         border-top: 5px solid $ia-primary-ligth;
          padding-top: 4rem;
          padding-bottom: 3rem;
          height: 350px;
@@ -454,23 +449,23 @@ main{
       }
 
       .plan-option{
-         border: 1px solid rgb(215, 215, 215);
+         border: 1px solid $ia-border;
          font-family: Tasman;
          font-size: 1.5rem;
          padding-left: 2rem;
          font-weight: 600;
-         color: #747474;
+         color: $ia-text-light;
          padding-top: 1.75rem;
          padding-bottom: 1.75rem;
          background-color: white;
       }
 
       .plan-data{
-         border: 1px solid rgb(215, 215, 215);
+         border: 1px solid $ia-border;
          font-family: Montserrat;
          font-size: 1.5rem;
          font-weight: 500;
-         color: #747474;
+         color: $ia-text-light;
          padding-top: 1.75rem;
          padding-bottom: 1.75rem;
          text-align: center;
@@ -478,20 +473,20 @@ main{
       }
 
       .plan-button{
-         border: 1px solid rgb(215, 215, 215);
+         border: 1px solid $ia-border;
          font-family: Montserrat;
          padding-top: 2.5rem;
          padding-bottom: 2.5rem;
          text-align: center;
-         background-color: #f6fdfe;
+         background-color: $ia-primary-ligther;
          font-size: 1.3rem;
 
          a{
             text-decoration: none;
-            color: #747474;
+            color: $ia-text-light;
             padding: 1rem 3rem;
             background-color: white;
-            border: 1px solid rgb(215, 215, 215);
+            border: 1px solid $ia-border;
 
             &:hover{
                background-color: $ia-primary;
@@ -507,22 +502,22 @@ main{
 }
 
 footer{
-   background-color: #232322;
+   background-color: $ia-footer;
 
    .upper-footer{
       padding-top: 12rem;
       padding-bottom: 7rem;
-      border-bottom: 1px solid rgb(154, 154, 154);
+      border-bottom: 1px solid $ia-border;
 
       p{
          font-family: Montserrat;
-         color: rgb(216, 216, 216);
+         color: $ia-text-lighter;
          font-size: 1.25rem;
       }
 
       span{
          font-family: Montserrat;
-         color: rgb(216, 216, 216);
+         color: $ia-text-lighter;
          font-weight: 600;
       }
 
@@ -536,36 +531,25 @@ footer{
       .course-name{
          font-family: Tasman;
          font-size: 1.75rem;
-         color: rgb(216, 216, 216);
-         font-weight: 500;
-
-         a{
-            text-decoration: none;
-            color: rgb(216, 216, 216);
-         }
+         color: $ia-text-lighter;         
       }
 
-      .course-teacher{
-         font-family: Montserrat;
-         font-size: 1.25rem;
+      a{
+         text-decoration: none;
+         color: $ia-text-lighter;
       }
 
-      .support-voice{
+      .course-teacher, .support-voice{
          font-family: Montserrat;
          font-size: 1.25rem;
          font-weight: 500;
-
-         a{
-            color: rgb(216, 216, 216);
-            text-decoration: none;
-         }
       }
    }
 
    .lower-footer{
       padding: 4rem 0;
       font-family: Montserrat;
-      color: rgb(216, 216, 216);
+      color: $ia-text-lighter;
 
    }   
 }

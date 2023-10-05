@@ -2,7 +2,6 @@
 export default{
    name: "AppJumbotron"
 }
-
 </script>
 
 <template>
